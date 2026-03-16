@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Circle Counter</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+font-family:Arial;
+color:white;
+}
+
+/* COUNTER LAYOUT */
+
+.counter{
+display:flex;
+align-items:center;
+gap:80px;
+}
+
+/* NUMBER */
+
+#count{
+font-size:90px;
+font-weight:bold;
+}
+
+/* CIRCLE BUTTON */
+
+.circle{
+width:90px;
+height:90px;
+border-radius:50%;
+border:3px solid white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.circle:hover{
+background:white;
+color:black;
+transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="counter">
+
+<div class="circle" onclick="decrease()">−</div>
+
+<div id="count">0</div>
+
+<div class="circle" onclick="increase()">+</div>
+
+</div>
+
+<script>
+
+let count = 0
+
+function increase(){
+
+count++
+
+document.getElementById("count").innerText = count
+
+}
+
+function decrease(){
+
+count--
+
+document.getElementById("count").innerText = count
+
+}
+
+</script>
+
+</body>
+</html>
